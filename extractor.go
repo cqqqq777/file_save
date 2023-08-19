@@ -11,7 +11,7 @@ var (
 	errMissingKey = errors.New("missing key")
 )
 
-// Extractor defines the function to get token from app.Request Context
+// Extractor defines the function to get file from app.Request Context
 type Extractor func(c *app.RequestContext) (*multipart.FileHeader, error)
 
 func NewExtractor(key string) (Extractor, error) {
